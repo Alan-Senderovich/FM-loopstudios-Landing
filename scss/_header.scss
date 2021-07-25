@@ -1,0 +1,45 @@
+@import "_var";
+
+header {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  transition: .3s ease;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  // position: fixed;
+  width: 85%;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  padding: 0 15px;
+}
+
+header ul li a {
+  color: white;
+  position: relative;
+  &::before {
+    content: "";
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    width: 20px;
+    bottom: -5px;
+    opacity: 0;
+    left: 30%;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+
+}
